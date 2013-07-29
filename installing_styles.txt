@@ -1,0 +1,19 @@
+How to install Latex style files:
+
+For the MacTex distribution, installing style files for system-wide use is fairly simple. To do so, perform the following:
+
+-Copy the .sty file into the appropriate latex directory. Using MacTex 2008, the proper directory is: /usr/local/texlive/2008/texmf-dist/tex/latex/base. Run the following command from the directory containing the .sty file:
+	>> sudo cp file.sty /usr/local/texlive/2008/texmf-dist/tex/latex/base/file.sty
+
+	-If you're using a different version of MacTex or a different distribution, you'll need to 		find the appropriate directory. It should be a in a similar location, so look in 	/usr/local/texlive/. Check the folder for a bunch of .sty files, and you'll know you're in 	the right spot.
+
+-Copy any other files that the .sty file refers to into this directory as well. For example, if the style file is a beamer template and utilizes a logo or picture, place this file in the Tex folder as shown above.
+
+-Once the files are copied into the appropriate directory, they can be removed from the original directory, to avoid confusion.
+
+-Now the Tex libraries must be updated before the style files can be accessed from anywhere. Run the following command:
+	>> sudo texhash
+
+-Now you can access the style files from anywhere on your computer! No need to keep placing the style file in the directory containing your Tex document!
+
+Enjoy :)
